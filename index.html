@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Motors - Premium Car Showroom</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== SECTION 1: HEADER & HERO ==================== -->
+    <header class="header-section">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-car-side"></i> APEX <span>MOTORS</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#featured">Featured Cars</a></li>
+                
+                <!-- Dropdown Menu for Blog -->
+                <li class="dropdown">
+                    <a href="#blog-section" class="dropdown-toggle">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#blog-section">Car Reviews</a>
+                        <a href="#blog-section">Maintenance Tips</a>
+                        <a href="#blog-section">Auto News</a>
+                    </div>
+                </li>
+
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search cars...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Container with Opacity Overlay -->
+        <div id="hero" class="hero-container">
+            <div class="hero-content">
+                <h1>DRIVE THE FUTURE OF LUXURY</h1>
+                <p>Explore our exclusive collection of high-performance modern electric and sports vehicles.</p>
+                <div class="hero-buttons">
+                    <a href="#featured" class="btn btn-primary">Explore Fleet</a>
+                    <a href="#contact" class="btn btn-secondary">Book Test Drive</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 2: 3 CARDS WITH BEFORE/AFTER ==================== -->
+    <section id="services" class="sec-features">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <div class="line"></div>
+        </div>
+        <div class="container cards-wrapper">
+            <div class="feature-card effect-ba">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Certified Warranty</h3>
+                <p>All our cars come with a comprehensive 5-year bumper-to-bumper manufacturer warranty.</p>
+            </div>
+            <div class="feature-card effect-ba">
+                <div class="icon-box"><i class="fa-solid fa-gauge-high"></i></div>
+                <h3>High Performance</h3>
+                <p>Thoroughly tested vehicles guaranteeing peak horsepower, speed, and safety standards.</p>
+            </div>
+            <div class="feature-card effect-ba">
+                <div class="icon-box"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h3>Flexible Financing</h3>
+                <p>Tailored financial plans with ultra-low interest rates fitting your personal budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 3: 3 IMAGES WITH HOVER & ICONS ==================== -->
+    <section class="sec-gallery">
+        <div class="section-header">
+            <h2>Top Categories</h2>
+            <div class="line"></div>
+        </div>
+        <div class="container gallery-wrapper">
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Sports Cars">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-bolt icon-hover"></i>
+                    <h3>Supercars & Sports</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80" alt="SUVs">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-mountain-sun icon-hover"></i>
+                    <h3>Luxury SUVs</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Electric Cars">
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-charging-station icon-hover"></i>
+                    <h3>Electric Vehicles</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 4: 6 CARDS WITH BEFORE/AFTER ==================== -->
+    <section class="sec-services-six">
+        <div class="section-header">
+            <h2>Our Premium Services</h2>
+            <div class="line"></div>
+        </div>
+        <div class="container six-cards-grid">
+            <div class="service-card effect-ba">
+                <i class="fa-solid fa-wrench"></i>
+                <h3>Full Maintenance</h3>
+                <p>Scheduled diagnostics, oil change, and engine checkups by experts.</p>
+            </div>
+            <div class="service-card effect-ba">
+                <i class="fa-solid fa-car-burst"></i>
+                <h3>Accident Repair</h3>
+                <p>Body shop work and original spare parts replacement guaranteed.</p>
+            </div>
+            <div class="service-card effect-ba">
+                <i class="fa-solid fa-spray-can"></i>
+                <h3>Custom Paint</h3>
+                <p>Premium ceramic coating, wrapping, and custom color painting.</p>
+            </div>
+            <div class="service-card effect-ba">
+                <i class="fa-solid fa-key"></i>
+                <h3>Car Rental</h3>
+                <p>Executive vehicle leasing and daily luxury car rental options.</p>
+            </div>
+            <div class="service-card effect-ba">
+                <i class="fa-solid fa-truck-monster"></i>
+                <h3>Towing Service</h3>
+                <p>24/7 roadside assistance and instant vehicle recovery support.</p>
+            </div>
+            <div class="service-card effect-ba">
+                <i class="fa-solid fa-file-contract"></i>
+                <h3>Auto Insurance</h3>
+                <p>Hassle-free comprehensive car insurance policies for all models.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 5: IMAGE + CONTENT + 3 DOTS ==================== -->
+    <section class="sec-about-dots">
+        <div class="container about-flex">
+            <div class="about-image-side">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Showroom About">
+                <div class="pagination-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="about-text-side">
+                <h2>Redefining The Showroom Experience</h2>
+                <p>Founded over two decades ago, Apex Motors has consistently set the standard in high-end automotive sales. We offer an unparalleled collection of world-class motorcars in an inspiring architectural space.</p>
+                <p>Our expert team provides bespoke consultation to ensure every client finds the vehicle tailored to their exact passion and lifestyle requirements.</p>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 6: SCROLL PARALLAX + 4 ICONS ==================== -->
+    <section class="sec-parallax-stats">
+        <div class="parallax-overlay">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <i class="fa-solid fa-car"></i>
+                    <h2>2,500+</h2>
+                    <p>Cars Sold</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h2>1,800+</h2>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h2>45+</h2>
+                    <p>Industry Awards</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-building-flag"></i>
+                    <h2>12</h2>
+                    <p>Global Showrooms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 7: 3 PRICING CARDS WITH BEFORE/AFTER ==================== -->
+    <section id="pricing" class="sec-pricing">
+        <div class="section-header">
+            <h2>Financing & Membership Plans</h2>
+            <div class="line"></div>
+        </div>
+        <div class="container pricing-wrapper">
+            <div class="price-card effect-ba">
+                <h3>Silver Pass</h3>
+                <div class="price-amount">$299 <span>/ month</span></div>
+                <ul>
+                    <li>Standard Maintenance</li>
+                    <li>Free Car Wash Twice / Mo</li>
+                    <li>Roadside Assistance</li>
+                </ul>
+                <div class="btn-wrapper">
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+            <div class="price-card effect-ba featured">
+                <h3>Gold VIP</h3>
+                <div class="price-amount">$599 <span>/ month</span></div>
+                <ul>
+                    <li>Full Coverage Maintenance</li>
+                    <li>Unlimited Detailing</li>
+                    <li>Priority Loaner Vehicles</li>
+                    <li>24/7 Concierge Service</li>
+                </ul>
+                <div class="btn-wrapper">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+            <div class="price-card effect-ba">
+                <h3>Platinum Track</h3>
+                <div class="price-amount">$999 <span>/ month</span></div>
+                <ul>
+                    <li>Track Day Access</li>
+                    <li>Private Storage Locker</li>
+                    <li>Free Transport Service</li>
+                </ul>
+                <div class="btn-wrapper">
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 8: PARALLAX TESTIMONIALS ==================== -->
+    <section class="sec-parallax-reviews">
+        <div class="parallax-overlay dark-overlay">
+            <div class="container">
+                <div class="section-header white">
+                    <h2>Expert Reviews & Feedback</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="testimonials-wrapper">
+                    <div class="testimonial-box">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Reviewer">
+                        <p>"Apex Motors provided the smoothest buying experience I have ever had. The team went above and beyond!"</p>
+                        <h4>Sophia Reynolds</h4>
+                        <span>Automotive Journalist</span>
+                    </div>
+                    <div class="testimonial-box">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Reviewer">
+                        <p>"The selection of electric vehicles is unmatched. Outstanding customer service and pristine showroom."</p>
+                        <h4>Marcus Vance</h4>
+                        <span>Tech Entrepreneur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 9: 3 IMAGE CARDS WITH SOCIAL HOVER & BEFORE/AFTER ==================== -->
+    <section id="featured" class="sec-featured-cars">
+        <div class="section-header">
+            <h2>Featured Inventory</h2>
+            <div class="line"></div>
+        </div>
+        <div class="container featured-wrapper">
+            <div class="car-card effect-ba">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Model S">
+                    <div class="social-hover-overlay">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>2026 GT Cyber Coupe</h3>
+                    <p>Electric | 750 HP | 0-60 in 2.4s</p>
+                    <span class="price-tag">$125,000</span>
+                </div>
+            </div>
+
+            <div class="car-card effect-ba">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="Model X">
+                    <div class="social-hover-overlay">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Apex Stealth Sedan</h3>
+                    <p>V8 Twin Turbo | 620 HP | Luxury Spec</p>
+                    <span class="price-tag">$98,000</span>
+                </div>
+            </div>
+
+            <div class="car-card effect-ba">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80" alt="Model Y">
+                    <div class="social-hover-overlay">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>Apex Horizon SUV</h3>
+                    <p>AWD Hybrid | 450 HP | Panoramic Roof</p>
+                    <span class="price-tag">$85,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 10: 3 TEAM MEMBERS WITH BEFORE/AFTER ==================== -->
+    <section id="team" class="sec-team">
+        <div class="section-header">
+            <h2>Meet Our Specialists</h2>
+            <div class="line"></div>
+        </div>
+        <div class="container team-wrapper">
+            <div class="team-card effect-ba">
+                <div class="team-img">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Team Member">
+                </div>
+                <h3>David Miller</h3>
+                <p class="role">Chief Automotive Engineer</p>
+                <p class="bio">15+ years of experience in performance tuning and aerodynamics.</p>
+            </div>
+            <div class="team-card effect-ba">
+                <div class="team-img">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Team Member">
+                </div>
+                <h3>Elena Rostova</h3>
+                <p class="role">Head of Luxury Sales</p>
+                <p class="bio">Specializes in VIP client relations and custom supercar orders.</p>
+            </div>
+            <div class="team-card effect-ba">
+                <div class="team-img">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80" alt="Team Member">
+                </div>
+                <h3>Alexander Wright</h3>
+                <p class="role">EV Technology Specialist</p>
+                <p class="bio">Pioneer in battery health management and next-gen motors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 11: BRANDS & APPS + FOOTER ==================== -->
+    <section class="sec-brands-apps">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mobile Application & Partners</h2>
+                <div class="line"></div>
+            </div>
+            <div class="apps-banner">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Mobile App Showcase" class="app-img">
+                <div class="app-buttons">
+                    <h3>Download Apex Motors App</h3>
+                    <p>Manage your car services, track orders, and schedule test drives directly from your phone.</p>
+                    <div class="btn-group">
+                        <a href="#" class="app-btn"><i class="fa-brands fa-apple"></i> App Store</a>
+                        <a href="#" class="app-btn"><i class="fa-brands fa-google-play"></i> Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3><i class="fa-solid fa-car-side"></i> APEX MOTORS</h3>
+                <p>The ultimate destination for luxury & sports cars.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Apex Motors. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

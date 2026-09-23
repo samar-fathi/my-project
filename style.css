@@ -1,0 +1,765 @@
+/* ==================== GLOBAL STYLES & RESET ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f1117;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+
+.section-header .line {
+    width: 70px;
+    height: 3px;
+    background-color: #ff3366;
+    margin: 10px auto 0;
+}
+
+.section-header.white h2 {
+    color: #ffffff;
+}
+
+/* ==================== SECTION 1: HEADER & NAVBAR ==================== */
+.header-section {
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(15, 17, 23, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #ff3366;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+/* Fade Underline effect on Hover using ::after */
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff3366;
+    transition: width 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1d28;
+    min-width: 180px;
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.dropdown-menu a::after {
+    display: none; /* disable underline inside dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: #ff3366;
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #1a1d28;
+    border-radius: 20px;
+    padding: 5px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #ff3366;
+    cursor: pointer;
+}
+
+/* Hero Section & Opacity Background */
+.hero-container {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #d1d5db;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* Buttons Hover Opacity */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #ff3366;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    margin-left: 15px;
+    background: transparent;
+}
+
+.btn:hover {
+    opacity: 0.75; /* Opacity hover effect */
+}
+
+/* ==================== COMMON BEFORE / AFTER HOVER EFFECT ==================== */
+/* Effect ::before and ::after overlay animation */
+.effect-ba {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.effect-ba::before, .effect-ba::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background-color: rgba(255, 51, 102, 0.15);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.effect-ba::before {
+    top: 0;
+    left: 0;
+}
+
+.effect-ba::after {
+    bottom: 0;
+    right: 0;
+}
+
+.effect-ba:hover::before, .effect-ba:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==================== SECTION 2: 3 CARDS ==================== */
+.sec-features {
+    padding: 90px 0;
+    background-color: #13151f;
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    background-color: #1a1d28;
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-card .icon-box {
+    font-size: 38px;
+    color: #ff3366;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* ==================== SECTION 3: GALLERY 3 IMAGES ==================== */
+.sec-gallery {
+    padding: 90px 0;
+}
+
+.gallery-wrapper {
+    display: flex;
+    gap: 25px;
+}
+
+.gallery-card {
+    flex: 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 320px;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-overlay .icon-hover {
+    font-size: 35px;
+    color: #ff3366;
+    margin-bottom: 10px;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* ==================== SECTION 4: 6 CARDS ==================== */
+.sec-services-six {
+    padding: 90px 0;
+    background-color: #13151f;
+}
+
+.six-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #1a1d28;
+    padding: 35px 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service-card i {
+    font-size: 36px;
+    color: #ff3366;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+/* ==================== SECTION 5: IMAGE + CONTENT + 3 DOTS ==================== */
+.sec-about-dots {
+    padding: 90px 0;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image-side {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image-side img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.pagination-dots {
+    margin-top: 15px;
+}
+
+.pagination-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #444;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination-dots .dot.active {
+    background-color: #ff3366;
+}
+
+.about-text-side {
+    flex: 1;
+}
+
+.about-text-side h2 {
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-text-side p {
+    color: #a0aec0;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* ==================== SECTION 6: PARALLAX STATS ==================== */
+.sec-parallax-stats {
+    background: url('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
+}
+
+.parallax-overlay {
+    background: rgba(15, 17, 23, 0.85);
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 40px;
+    color: #ff3366;
+    margin-bottom: 10px;
+}
+
+.stat-item h2 {
+    font-size: 38px;
+    color: #fff;
+}
+
+.stat-item p {
+    color: #cbd5e0;
+}
+
+/* ==================== SECTION 7: 3 PRICING CARDS ==================== */
+.sec-pricing {
+    padding: 90px 0;
+    background-color: #13151f;
+}
+
+.pricing-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.price-card {
+    flex: 1;
+    background-color: #1a1d28;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.price-card.featured {
+    border: 2px solid #ff3366;
+}
+
+.price-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.price-amount span {
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+.price-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.price-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #cbd5e0;
+}
+
+/* Prevent Button inside pricing card from ::before/after animation effects */
+.price-card .btn-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+/* ==================== SECTION 8: PARALLAX REVIEWS ==================== */
+.sec-parallax-reviews {
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.testimonial-box {
+    flex: 1;
+    background: rgba(26, 29, 40, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.testimonial-box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #ff3366;
+}
+
+.testimonial-box p {
+    font-style: italic;
+    color: #e2e8f0;
+    margin-bottom: 15px;
+}
+
+.testimonial-box h4 {
+    color: #fff;
+}
+
+.testimonial-box span {
+    font-size: 12px;
+    color: #ff3366;
+}
+
+/* ==================== SECTION 9: FEATURED INVENTORY ==================== */
+.sec-featured-cars {
+    padding: 90px 0;
+}
+
+.featured-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.car-card {
+    flex: 1;
+    background-color: #1a1d28;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.car-card .img-box {
+    position: relative;
+    height: 220px;
+}
+
+.car-card .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-hover-overlay a {
+    color: #fff;
+    background-color: #ff3366;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.car-card:hover .social-hover-overlay {
+    opacity: 1;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details h3 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.card-details p {
+    color: #a0aec0;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    color: #ff3366;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* ==================== SECTION 10: TEAM ==================== */
+.sec-team {
+    padding: 90px 0;
+    background-color: #13151f;
+}
+
+.team-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.team-card {
+    flex: 1;
+    background-color: #1a1d28;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.team-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ff3366;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    color: #fff;
+}
+
+.team-card .role {
+    color: #ff3366;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.team-card .bio {
+    color: #a0aec0;
+    font-size: 13px;
+}
+
+/* ==================== SECTION 11: BRANDS, APPS & FOOTER ==================== */
+.sec-brands-apps {
+    padding: 90px 0;
+}
+
+.apps-banner {
+    display: flex;
+    align-items: center;
+    background-color: #1a1d28;
+    border-radius: 15px;
+    padding: 40px;
+    gap: 40px;
+}
+
+.app-img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.app-buttons h3 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.app-buttons p {
+    color: #a0aec0;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.app-btn {
+    background-color: #0f1117;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app-btn:hover {
+    background-color: #ff3366;
+}
+
+.main-footer {
+    background-color: #090a0f;
+    padding: 40px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-info h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    color: #718096;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.footer-socials a:hover {
+    color: #ff3366;
+}
+
+.copyright {
+    text-align: center;
+    color: #4a5568;
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
